@@ -1,0 +1,35 @@
+// REST Client extension
+
+### Buscar todas las peliculas
+GET http://localhost:3000/movies
+
+
+### Buscar pelicula por su ID REVISARR
+GET http://localhost:3000/movies/682b7c2b5bf2958049935a58
+
+
+### Crear una nueva pelicula
+POST http://localhost:3000/movies
+Content-Type:application/json
+
+{
+  "title": "La bella durmiente",
+  "year": 2000,
+  "director": "Christopher Nolan",
+  "duration": 152,
+  "poster": "https://i.ebayimg.com/images/g/yokAAOSw8w1YARbm/s-l1200.jpg",
+  "genre": "Drama",
+  "rate": 8.0
+}
+
+
+### Modificar el titulo de una pelicula
+PATCH http://localhost:3000/movies?id=682b7c2b5bf2958049935a58
+Content-Type: application/json
+
+{
+  "newTitle": "Nuevo titulo"
+}
+
+### Eliminar una movie
+DELETE http://localhost:3000/movies?id=682b7c2b5bf2958049935a58
